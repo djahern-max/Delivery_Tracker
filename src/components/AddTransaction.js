@@ -40,10 +40,13 @@ export const AddTransaction = () => {
         <div className="form-control">
           <label htmlFor="text">DESCRIPTION</label>
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Product Delivered..." />
-          <label htmlFor="text">FROM</label>
-          <input type="text" value={to} onChange={(e) => setTo(e.target.value)} placeholder="Job / Pit #..." />
+
           <label htmlFor="text">TO</label>
           <input type="text" value={from} onChange={(e) => setFrom(e.target.value)} placeholder="Job / Pit #..." />
+          
+          <label htmlFor="text">FROM</label>
+          <input type="text" value={to} onChange={(e) => setTo(e.target.value)} placeholder="Job / Pit #..." />
+
           <label htmlFor="text">PHASE CODE</label>
           <input type="text" value={phase} onChange={(e) => setPhase(e.target.value)} placeholder="Phase Code..." />
         </div>
