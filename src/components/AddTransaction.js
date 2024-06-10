@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
 import Select from 'react-select';
+import DropDownProfile from './DropDownProfile';
 
 export const AddTransaction = () => {
   const [text, setText] = useState('');
@@ -11,7 +12,6 @@ export const AddTransaction = () => {
 
   function materialOptions () {
 
-
     const material = [
       {label: "BRG"},
       {label: "RCL"},
@@ -19,8 +19,22 @@ export const AddTransaction = () => {
     
         ]
 
-
   }
+
+
+
+    function displayArray (array)  {
+      console.log('Button clicked!');
+
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+ 
+    }
+
+    const array = ['BRG', 'CBR', 3, 4, 5];
+
+    
 
   function NumberOptions () {
 
@@ -58,14 +72,14 @@ return (
           <label htmlFor="amount"
             >QUANTITY <br />
             </label>
-          <input number={NumberOptions} type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+          <input  number={NumberOptions} type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
 
 
         <div className="form-control">
           <label htmlFor="text">DESCRIPTION</label>
       
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Product Delivered..." />
+          <input type="text" value={text} onClick={displayArray} onChange={(e) => setText(e.target.value)} placeholder="Product Delivered..." />
 
 
 
